@@ -3,9 +3,11 @@
 > Vue.js+Python+Mysql的前后端分离的个人博客
 
 ## 主要技术构成
-前端主要技术栈为Vue.js,Axios,Jquery等···
+> 前端主要技术栈为Vue.js,Axios,Jquery等···
 
-后端主要技术栈为Python,Mysql等···
+> 后端主要技术栈为Python,Flask
+
+> 数据库主页为MySQL
 
 ## 目录
 * [YanLin-Blog](#YanLin-Blog)
@@ -77,9 +79,9 @@
 
 ### TODO
 - 简化webpack配置
-- 添加代码规范。BEM + JsDoc
+- 添加BEM代码规范。
 - 重构代码
 
 ## License
 
-[Yan_Lin](https://github.com/1730933627/Blog/blob/main/README.md)
+[YanLin's Blog](https://github.com/1730933627/Blog/blob/master/README.md)
