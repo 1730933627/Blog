@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<head>
+    <title>News-Article | YanLin</title>
+    <link href="../css/landscape/article.css" media="all and (orientation:landscape)" rel="stylesheet"/>
+    <link href="../css/portrait/article.css" media="all and (orientation:portrait)" rel="stylesheet"/>
+    <link href="../css/normal.css" rel="stylesheet"/>
+    <link rel="icon" href="../img/logo/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+    <meta charset="utf-8"> 
+    <script src="../js/logo.js"></script>
+    <link rel="stylesheet" type="text/css" href="../live2d/waifu.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/player.css"/>
+    <script src="../js/lib/pace.min.js"></script>
+    <link rel="stylesheet" href="../css/pace-theme-minimal.css">
+    <script src="../js/lib/scrollprogressJS.js"></script>
+    <script src="../js/pattern_mode/subpage.js"></script>
+    <link rel="stylesheet" href="../css/scrollprogressJS.css">
+    <script src="../js/lib/jquery.min.js"></script>
+</head>
+<body>
+    <script src="../js/article/background.js"></script>
+    <div>
+        <div id="QPlayer">
+            <div id="pContent">
+                <div id="player">
+                    <span class="cover"></span>
+                    <div class="ctrl">
+                        <div class="musicTag marquee">
+                            <strong>Title</strong>
+                            <span> - </span>
+                            <span class="artist">Artist</span>
+                        </div>
+                        <div class="progress">
+                            <div class="timer left">0:00</div>
+                            <div class="contr">
+                                <div class="rewind icon"></div>
+                                <div class="playback icon"></div>
+                                <div class="fastforward icon"></div>
+                            </div>
+                            <div class="right">
+                                <div class="liebiao icon"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ssBtn">
+                        <div class="adf"></div>
+                </div>
+            </div>
+            <ol id="playlist"></ol>
+        </div>
+        <!-- <script src="../js/getvideoinfo/get_music.js"></script> -->
+        <script src="../js/qplayer/jquery.marquee.min.js"></script>
+        <script src="../js/qplayer/getmusic.js"></script>
+        <script>
+            var playlist = songlist();
+            var isRotate = true;
+            var autoplay = false;
+        </script>
+        <script src="../js/qplayer/player.js"></script>
+    </div>
+
+    <div class="waifu">
+        <div class="waifu-tips"></div>
+        <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+        <div class="waifu-tool">
+            <span class="fui-home"></span>
+            <span class="fui-chat"></span>
+            <span class="fui-eye"></span>
+            <span class="fui-user"></span>
+            <span class="fui-photo"></span>
+            <span class="fui-cross"></span>
+        </div>
+    </div>
+
+        <div class="top">
+            <div class="logo">
+                <a href="../">
+                    <img src="../img/logo/logo.png"/>
+                </a>
+            </div>
+            <div>
+                <div class="open_menu" id="open_menu">
+                    <img src="../img/logo/menu.png"/>
+                </div>
+                <div class="menu_list" id="menu_list">
+                    <ul>    
+                        <a href="../"><li>Home</li></a>
+                        <a href="news"><li>News</li></a>
+                        <a href="biography"><li>Biography</li></a>
+                        <script>title()</script>
+                        <a href="download"><li>Download</li></a>
+                        <a href="contsat"><li>Contact</li></a>
+                    </ul>
+                </div>
+            </div>
+            <script src="../js/open_menu.js"></script>
+            <script>open_menu("n")</script>
+            <div class="wideview">
+            </div>
+        </div>
+        <div class="bottom" id="bottom">
+            <script src="../js/article/article_jump.js"></script>
+            <footer class="footer" id="footer">
+                <div class="page">
+                    <div class="left" id="left"><img src="../img/article/ico/jt_left.png"></div>
+                    <div class="right" id="right"><img src="../img/article/ico/jt_right.png"></div>
+                    <script src="../js/lib/page.js"></script>
+                </div>
+
+                <div id="sns-list">
+                    <div class="f-item" id="open_qq"><a href="javascript:void(0)"><script src="../js/open_qq.js"></script><img src="../img/logo/QQ.png"/></a></div>
+                    <div class="f-item"><a href="https://www.patreon.com/YanLinn" target="_blank"><img src="../img/logo/PT.png"/></a></div>
+                    <div class="f-item" id="wx"><a href="javascript:void(0)"><img src="../img/logo/WX.png"/></a></div>
+                    <div class="f-item"><a href="https://afdian.net/@YanLinn" target="_blank"><img src="../img/logo/AFD.png"/></a></div>
+                </div>
+                <div class="wx" id="wxbody" style="display:none">
+                    <img src="../img/logo/wx.jpg">
+                    <script src="../js/wechat.js"></script>
+                    <script>open_vx("a")</script>
+                </div>
+                <p>@YanLin&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="about">YanLin Inc</a></p>
+            </footer>
+            <div id="to_top">
+                <script src="../js/to_top.js"></script>
+                <img src="../img/logo/jt (2).png" style="width:30px;position: absolute; bottom: 33px; right: 35px;">
+                <img src="../img/logo/lx.png">
+            </div>
+        </div>
+
+    <script src="../live2d/waifu-tips.js"></script>
+    <script src="../live2d/live2d.js"></script>
+    <script type="text/javascript">initModel("../live2d/")</script>
+</body>

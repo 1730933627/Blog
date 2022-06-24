@@ -1,0 +1,310 @@
+html,body{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+.top{
+    position:fixed;
+    left: 0;
+    top: 0;
+    width:100%;
+    z-index: 20;
+    padding:30px 0;
+    height: 50px;
+    transition: all 0.5s ease-in-out;
+}
+.top #top-bt{
+    height: 50px;
+    padding: 30px 0;
+    background-color: #fff;
+    position:fixed;
+    left: 0;
+    top: 0;
+    width:100%;
+}
+.logo{
+    width:180px;
+    margin-left: 30px;
+    margin-top: -10px;
+    transition:transform 0.2s ease-in-out;
+    transform: scale(1);
+}
+.logo img{
+    width: 100%;
+    user-select: none;
+}
+.logo:hover{
+    transition:transform 0.2s ease-in-out;
+    transform: scale(1.05);
+}
+.top ul a,.top ul a:visited{
+    color:#00BFFF;
+}
+.open_menu{
+    cursor: cell;
+    margin: 30px;
+    width: 70px;
+    position: fixed;
+    top:0;
+    right:0;
+    z-index: 50;
+}
+.open_menu img{
+    width: 100%;
+}
+.menu_list{
+    z-index: -20;
+    display: block;
+    background-color: #fff;
+    position:absolute;
+    top: 110px;
+    right: 0;
+    border-bottom-left-radius:10px;
+    transform: translate(0,-135%);  
+    transition: all 0.5s ease-in-out;
+}
+.menu_list ul{
+    list-style-type:none;
+    padding: 0;
+    margin: 0;
+}
+.menu_list ul li{
+    padding: 10px;
+    text-align: center;
+    margin: 10px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    transform:translate(0px,0px);
+    transition:transform 0.2s ease-in-out;
+}
+.menu_list ul li:hover{
+    transform:translate(-5px,0px);
+    transition:transform 0.2s ease-in-out;
+}
+.bottom{
+    width:100%;
+    padding-bottom: 100px;
+    background-color: #87CEFA;
+}
+.bottom #btop{
+    height:100px;
+}
+.bottom #myc-main{
+    padding-top: 40px;
+}
+.bottom #centerview{
+    width: 80%;
+    cursor:default;
+    position: relative;
+    margin: 0 auto;
+    padding: 0 5px 0 5px;
+    transition: all 0.5s ease-in-out;
+}
+.bottom #page-title-bar{
+    position: relative;
+    overflow: hidden;
+}
+.bottom #page-title-bar h1{
+    transition: all 0.5s ease-in-out;
+    line-height: 100%;
+    font-size: 45px;
+    font-weight: bold;
+    color: aliceblue;
+}
+.footer{
+    padding: 60px 0 10px 0;
+}
+.footer #sns-list{
+    text-align: center;
+}
+.footer #sns-list .f-item{
+    display: inline;
+    margin: 0 10px;
+}
+.footer #sns-list .f-item img{
+    transform: translate(0px,0px);
+    transition:transform 0.2s ease-in-out;
+    width:10%;
+}
+.footer #sns-list .f-item img:hover{
+    transform: translate(0px,-5px);
+    transition:transform 0.2s ease-in-out;
+}
+.footer p{
+    margin-top: 50px;
+    text-align: center;
+    color: aliceblue;
+}
+.footer p a{
+    color: aliceblue;
+}
+.footer p a:hover{
+    text-decoration:underline;
+}
+.triangle{
+    transition: all 0.3s ease-in-out;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 80px solid aliceblue;
+    border-right: 160px solid transparent;
+    z-index: 10;
+}
+@keyframes nekopara{
+    0%{left:-200px;opacity: 0;}
+    100%{left:25px;opacity: 1;}
+}
+.triangle img{
+    display: block;
+    user-select: none;
+    position: relative;
+    bottom: 23px;
+    left: 25px;
+    width: 60px;
+    animation: nekopara 1s ease-in-out;
+}
+.contact-content{
+    margin: 20px auto 0;
+    width: 90%;
+    padding: 10px;
+    box-shadow: 0 0 50px #63c3ff;
+    border-radius: 10px;
+}
+.contact-content #interval{
+    margin-bottom: 5px;
+}
+.contact-content #title{
+    display: inline-block;
+    width: 150px;
+}
+.contact-content input,textarea{
+    margin: 10px 5px;
+    padding: 0 10px;
+    border: 1px solid #696969;
+    transition-property: border;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+.contact-content textarea{
+    display:block;
+    padding: 10px 10px;
+    width: 90%;
+    resize: vertical;
+    font-size: 16px;
+}
+.contact-content input:focus,.contact-content textarea:focus{
+    background-color: aliceblue;
+    outline: none;
+}
+.contact-content input:hover,.contact-content textarea:hover{
+    transition: all 0.3s ease-in-out;
+    background-color: aliceblue;
+    border: 1px solid black;
+}
+.contact-content input:invalid,.contact-content textarea:invalid{
+    transition: all 1s ease-in-out;
+    border: 1px solid red;
+}
+.contact-content #txt{
+    color: aliceblue;
+}
+.contact-content input[type="email"]{
+    position: relative;
+    top:-2px;
+    width: 90%;
+    height: 30px;
+}
+.contact-content input[type="text"]{
+    position: relative;
+    top:-2px;
+    width: 90%;
+    height: 30px;
+}
+.contact-content h2{
+    font-size: 20px;
+    line-height: 100%;
+    color: aliceblue;
+    display: inline-block;
+    margin-right: 30px;
+}
+.contact-content #radio{
+    color: aliceblue;
+    margin-right: 4%;
+    font-size: 20px;
+}
+.contact-content #agreement{
+    width: 20px;
+    height: 20px;
+}
+.contact-content #agree{
+    font-weight: bold;
+    color: #fff;
+    position: relative;
+    top: -3px;
+    font-size: 20px;
+}
+.contact-content #text{
+    text-align: center;
+    width: 85%; 
+    margin: 50px 0 10px 0;
+}
+.contact-content #text{
+    margin: 0 auto;
+}
+.submit{
+    margin: 0 auto;
+    text-align: center;
+    width: 150px;
+}
+.submit button{
+    margin: 0 auto;
+    width: 150px;
+    height: 45px;
+    font-size: 16px;
+    border: 2px solid #fff;
+    background-color: #363636;
+    border-radius: 5px;
+    color: aliceblue;
+    cursor:not-allowed;
+    transform: scale(1);
+    transition: transform 0.2s ease-in-out;
+}
+.submit button:hover{
+    transform: scale(1.03);
+    transition: transform 0.2s ease-in-out;
+}
+
+
+#Links{
+    cursor: default;
+    color: #00BFFF;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+@keyframes dropdown{
+    0%{transform: translateX(10px);}
+    100%{transform: translateX(0px);}
+}
+.dropdown-content{
+    padding: 6px 10px;
+    background: #fff;
+    display: none;
+    position: absolute;
+    animation: dropdown 0.5s ease-out;
+    top: -55px;
+    right: 80px;
+    border-radius: 5px;
+    text-align: center;
+}
+.dropdown-content a{
+    line-height: 2.5;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}

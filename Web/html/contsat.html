@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<head>
+    <title>Contact | YanLin</title>
+    <link href="../css/landscape/contact.css" media="all and (orientation:landscape)" rel="stylesheet"/>
+    <link href="../css/portrait/contact.css" media="all and (orientation:portrait)" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+    <link rel="stylesheet" href="../css/keyframes.css">
+    <link rel="icon" href="../img/logo/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../live2d/waifu.css"/>
+    <meta charset="utf-8"> 
+    <script src="../js/lib/axios.min.js"></script>
+    <script src="../js/lib/jquery.min.js"></script>
+    <script src="../js/logo.js"></script>
+    <script src="../js/pattern_mode/subpage.js"></script>
+    <script src="../js/lib/pace.min.js"></script>
+    <script src="../js/lib/vue.min.js"></script>
+    <link rel="stylesheet" href="../css/pace-theme-minimal.css">
+</head>
+<body>
+    <div class="top">
+        <div id="top-bt"></div>
+        <div class="logo">
+            <a href="../">
+                <img src="../img/logo/logo.png"/>
+            </a>
+        </div>
+        <div>
+            <div class="open_menu" id="open_menu">
+                <img src="../img/logo/menu.png"/>
+            </div>
+            <div class="menu_list" id="menu_list">
+                <ul>    
+                    <a href="../"><li>Home</li></a>
+                    <a href="news"><li>News</li></a>
+                    <a href="biography"><li>Biography</li></a>
+                    <script>title()</script>
+                    <a href="download"><li>Download</li></a>
+                    <a href="contsat"><li>Contact</li></a>
+                </ul>
+            </div>
+        </div>
+        <script src="../js/open_menu.js"></script>
+        <script>open_menu("c")</script>
+    </div>
+
+    <div class="bottom" id="bottom">
+        <div id="btop"></div>
+        <div id="myc-main">
+            <div id="centerview">
+                <div id="page-title-bar">
+                    <h1>Contsat</h1>
+                </div>
+                <div class="contact-content">
+                    <div id="contact-body">
+                        <div id="interval">
+                            <div id="title"><h2>发送类型:</h2></div>
+                            <div style="width: 95%;display: inline-block;" id="radiod">
+                                <input type="radio" name="types" value="通讯" v-model="userInfo.type"><span id="radio">通讯</span>
+                                <input type="radio" name="types" value="咨询" v-model="userInfo.type"><span id="radio">咨询</span>
+                                <input type="radio" name="types" value="其他" v-model="userInfo.type"><span id="radio">其他</span>
+                            </div>
+                        </div>
+                        <div id="interval">
+                            <div id="title"><h2>称呼:</h2></div>
+                            <input id="name" type="text" name="name" value="" v-model="userInfo.name">
+                        </div>
+                        <div id="interval">
+                            <div id="title"><h2>电子邮箱:</h2></div>
+                            <input id="email" type="email" name="email" value="" v-model="userInfo.email">
+                        </div>
+                        <div id="interval">
+                            <div id="title" style="float: left;margin-right: 9px;"><h2>发送内容:</h2></div>
+                            <textarea name="texts" cols="40" rows="5" v-model="userInfo.text"></textarea>
+                        </div>
+                        <div id="text">
+                            <p id="txt">我们仅将查询表中输入的个人信息用于回答查询内容。</p>
+                            <p id="txt">我已经阅读了所有人的意见，印象和询问， 我们不承诺单独答复和回应。 谦虚地感谢您的理解。</p>
+                            <p style="text-align: center;">
+                                <input id="agreement" type="checkbox" name="agreement" value="0" aria-invalid="false" v-model="userInfo.agree">
+                                <span id="agree" @click="userInfo.agree=!userInfo.agree">我同意</span>
+                            </p>
+                        </div>
+                        <div class="submit">
+                            <div class="buttons">
+                                <div id="five" class="button">
+                                    <button type="button" :disabled="!userInfo.agree" id="send_btm" @click="button" :style="button_style">送信</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="modal-container" @click="container">
+                            <div class="modal-background">
+                                <div class="modal">
+                                    <h2 id="modal_pat">{{sendtext}}</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script src="../js/app/contast.js"></script>
+            </div>
+        </div>
+        <footer class="footer" id="footer">
+            <div id="sns-list">
+                <div class="f-item" id="open_qq"><a href="javascript:void(0)"><script src="../js/open_qq.js"></script><img src="../img/logo/QQ.png"/></a></div>
+                <div class="f-item" id="wx"><a href="javascript:void(0)"><img src="../img/logo/WX.png"/></a></div>
+                <script>sidebar()</script>
+            </div>
+            <div class="wx_c" id="wxbody" style="display:none">
+                <img src="../img/logo/wx.jpg">
+                <script src="../js/wechat.js"></script><script>open_vx("n")</script>
+            </div>
+            <p>@YanLin&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="about">YanLin Inc</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="info/login.html">Manage</a></p>
+        </footer>
+    </div>
+    <div class="triangle">
+        <img src="../img/logo/nekopara.png"/>
+        <div class="waifu">
+            <div class="waifu-tips"></div>
+            <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+            <div class="waifu-tool">
+                <span class="fui-chat" style="color: black;"></span>
+                <span class="fui-user" style="color: black;"></span>
+                <span class="fui-eye" style="color: black;"></span>
+                <span class="fui-photo" style="color: black;"></span>
+                <span class="fui-cross" style="color: black;"></span>
+            </div>
+            <script src="../live2d/waifu-tips.js"></script>
+            <script src="../live2d/live2d.js"></script>
+            <script type="text/javascript">initModel("../live2d/")</script>
+        </div>
+
+    </div>
+</body>

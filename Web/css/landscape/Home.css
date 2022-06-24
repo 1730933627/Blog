@@ -1,0 +1,243 @@
+*{
+    transition: all 0.5s ease-in-out;
+    user-select: none;
+}
+html,body{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: url('../../img/logo/lm.jpg');
+    background-size: cover;
+}
+.main{
+    margin: 0;
+    padding: 0;
+}
+.logo{
+    position: absolute;
+    top:10%;
+    left:7%;
+    width: 25%;
+}
+.logo img{
+    width: 100%;
+    transform:translate(0px,0px);
+    user-select: none;
+    transition:transform 0.2s ease-in-out;
+}
+.logo img:hover{
+    transform:translate(0px,-5px);
+    transition:transform 0.2s ease-in-out;
+}
+.open_menu{
+    cursor: cell;
+    margin: 30px;
+    width: 10%;
+    position: fixed;
+    top:0;
+    left:0;
+    display: none;
+}
+.open_menu img{
+    width: 0%;
+}
+.menu_list{
+    width: 750px;
+    height: 75px;
+    position: absolute;
+    top:1%;
+    right:2.5%;
+}
+.menu_list ul{
+    list-style-type:none;
+    padding: 0;
+    margin: 0;
+}
+.list{
+    float: left;
+    margin: 25px 30px;
+    font-weight:bold;
+    transform:translate(0px,0px);
+    transition:transform 0.2s ease-in-out;
+}
+ul a,ul a:visited{
+    color:#63B8FF;
+    text-decoration: none;
+}
+.list:hover{
+    transform:translate(0px,-5px);
+    transition:transform 0.2s ease-in-out;
+}
+.xin_body{
+    text-align: center;
+    /* background-color: #00BFFF; */
+    position: fixed;
+    top: 70%;
+    left: 0px;
+    border-top: 50px solid #00BFFF;
+    border-right: 15px solid transparent;
+    height: 0px;
+    width: 45px;
+    cursor: pointer;
+}
+.xin{
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+    position:absolute;
+    left: 1px;
+    top: -49px;
+    padding: 2px;
+    height: 45px;
+    width: 45px;
+}
+.xin:hover{
+    transform:scale(0.9);
+    transition:transform 0.3s ease-in-out;
+}
+
+.top_news{
+    position: fixed;
+    top:0;
+    right: -40px;
+    border-top: 70px solid #00BFFF;
+    border-right: 15px solid transparent;
+    height: 0;
+    width: 25px;
+    z-index: 5;
+}
+.top_news p{
+    transform:rotate(90deg);
+    color:#F0FFFF;
+    position: absolute;
+    left: -15px;
+    top: -63px;
+}
+.top_news p:hover{
+    text-decoration:underline;
+}
+.top_newsm{
+    z-index: 20;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    min-width: 27%;
+    height: 200px;
+    background-color: #00BFFF;
+    transform: translate(-100%,0px);
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+.new_topics{
+    position: absolute;
+    top:20px;
+    left:25px;
+    padding:5px;
+    font-size: 20px;
+    width:115px;
+    text-align: center;
+    background-color: rgb(77, 77, 77);
+    color:#fff;
+}
+.new_topics_p{
+    width: 100%;
+    min-height: 135px;
+    margin: 60px auto 0 auto;
+    padding-left: 35px;
+    padding-top: 15px;
+}
+.new_topics_p .time{
+    font-size: 18px;
+    color: #fff;
+    margin-right: 15px;
+    line-height: 35px;
+}
+.new_topics_p .word{
+    margin-right: 25px;
+    font-size: 18px;
+    color: #fff;
+    line-height: 35px;
+}
+.new_topics_p .word a,.new_topics_p #word a:visited{
+    color: #fff;
+    text-decoration: none;
+}
+.new_topics_p .word a:hover{
+    text-decoration:underline;
+}
+.news_jt{
+    width:50px;
+    position: absolute;
+    top: 5px;
+    right: 0;
+}
+.news_jt img{
+    width: 100%;
+}
+.item{
+    position: absolute;
+    top:9%;
+    right:1%;
+}
+.item_list{
+    transform:translate(0px,0px);
+    transition:transform 0.2s ease-in-out;
+    margin-bottom: 10px;
+}
+.item .item_list img{
+    border-radius:50px;
+    width:40px;
+}
+.item_list:hover{
+    transform:translate(-5px,0px);
+    transition:transform 0.2s ease-in-out;
+}
+.footer{
+    position: absolute;
+    bottom:0.5%;
+    right:0.5%;
+}
+.footer p{
+    font-size: 15px;
+    color:rgb(102, 102, 102);
+    margin:5px 5px;
+    cursor: default;
+}
+.footer a{
+    text-decoration: none;
+    transition:color 0.2s ease-in-out;
+    color:#00BFFF;
+}
+.footer a:hover{
+    transition:color 0.2s ease-in-out;
+    color:#1E90FF;
+}
+.canvas{
+    display: block;
+}
+
+#Links{
+    cursor: default;
+    color: #63B8FF;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content{
+    padding: 10px 0px;
+    display: none;
+    position: absolute;
+    text-align: left;
+}
+@keyframes dropdown{
+    0%{padding-left: 6px;}
+    100%{padding-left: 0px;}
+}
+.dropdown-content a{
+    animation: dropdown 0.5s ease-in-out;
+    line-height: 2;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}

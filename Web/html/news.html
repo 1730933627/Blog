@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<head>
+    <title>News | YanLin</title>
+    <link href="../css/landscape/news.css" media="all and (orientation:landscape)" rel="stylesheet"/>
+    <link href="../css/portrait/news.css" media="all and (orientation:portrait)" rel="stylesheet"/>
+    <link href="../css/normal.css" rel="stylesheet"/>
+    <link rel="icon" href="../img/logo/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+    <meta charset="utf-8"> 
+    <script src="../js/logo.js"></script>
+    <link rel="stylesheet" type="text/css" href="../live2d/waifu.css"/>
+    <script src="../js/lib/jquery.min.js"></script>
+    <script src="../js/lib/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/lib/axios.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/pattern_mode/subpage.js"></script>
+    <script src="../js/lib/pace.min.js"></script>
+    <link rel="stylesheet" href="../css/pace-theme-minimal.css">
+    <script src="../js/lib/scrollprogressJS.js"></script>
+    <link rel="stylesheet" href="../css/scrollprogressJS.css">
+    <script src="../js/lib/jquery.min.js"></script>
+</head>
+<body>
+    <div class="waifu">
+        <div class="waifu-tips"></div>
+        <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+        <div class="waifu-tool">
+            <span class="fui-chat"></span>
+            <span class="fui-eye"></span>
+            <span class="fui-user"></span>
+            <span class="fui-photo"></span>
+            <span class="fui-cross"></span>
+        </div>
+    </div>
+        <div class="top">
+            <div class="logo">
+                <a href="../">
+                    <img src="../img/logo/logo.png"/>
+                </a>
+            </div>
+            <div>
+                <div class="open_menu" id="open_menu">
+                    <img src="../img/logo/menu.png"/>
+                </div>
+                <div class="menu_list" id="menu_list">
+                    <ul>    
+                        <a href="../"><li>Home</li></a>
+                        <a href="news"><li>News</li></a>
+                        <a href="biography"><li>Biography</li></a>
+                        <script>title()</script>
+                        <a href="download"><li>Download</li></a>
+                        <a href="contsat"><li>Contact</li></a>
+                    </ul>
+                </div>
+            </div>
+            <script src="../js/open_menu.js"></script>
+            <script>open_menu("n")</script>
+            <div class="wideview"></div>
+        </div>
+        <div class="bottom" id="bottom">
+            <div id="btop"></div>
+            <div class="news-list" id="news-list">
+                <div id="bmenu">
+                    <div id="News">
+                        <h1>NEWS</h1>
+                        <div id="menu">
+                            <ul>
+                                <a @click="sortAll"><div class="buttom"><li>All</li></div></a>
+                                <a @click="sortVideo"><div class="buttom"><li>Video</li></div></a>
+                                <a @click="sortProgram"><div class="buttom"><li>Program</li></div></a>
+                                <a @click="sortclotes"><div class="buttom"><li>Clothes</li></div></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--normal-->
+                <div class="normal" id="normal">
+                    <div id="centerview">
+                        <div id="list">
+                            <div class="item" :id="item.type" v-for="item in msgs_news.dataShow">
+                                <a :href=item.video_url target="_blank">
+                                    <div id="image">
+                                        <img :src="item.img_url"/>
+                                    </div>
+                                    <div id="data">
+                                        <p>
+                                            <span id="year"><span id="num">{{item.year}}</span></span>
+                                            <span id="month"><span id="num">{{item.month}}</span></span>
+                                        </p>
+                                        <h3>{{item.name}}</h3>
+                                        <div class="item_buttom">
+                                            <p id="word">{{item.type}}</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--normal-->
+                <div class="perpage">
+                    <button id="pre" style="opacity:0;" @click="prePage"><span>上一页</span></button>
+                    <button id="next" style="opacity:0;" @click="nextPage"><span>下一页</span></button>
+                </div>
+            </div>
+            <script src="../js/app/news.js" type="text/javascript" charset="utf-8"></script>
+            <footer class="footer" id="footer">
+                <div id="sns-list">
+                    <div class="f-item" id="open_qq"><a href="javascript:void(0)"><script src="../js/open_qq.js"></script><img src="../img/logo/QQ.png"/></a></div>
+                    <div class="f-item" id="wx"><a href="javascript:void(0)"><img src="../img/logo/WX.png"/></a></div>
+                    <script>sidebar()</script>
+                </div>
+                <div class="wx" id="wxbody" style="display:none">
+                    <img src="../img/logo/wx.jpg">
+                    <script src="../js/wechat.js"></script>
+                    <script>open_vx("n")</script>
+                </div>
+                <p>@YanLin&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="about">YanLin Inc</a></p>
+            </footer>
+            <div id="to_top">
+                <script src="../js/to_top.js"></script>
+                <img src="../img/logo/jt (2).png" style="width:30px;position: absolute; bottom: 33px; right: 35px;cursor:pointer;">
+                <img src="../img/logo/lx.png">
+            </div>
+        </div>
+    <script src="../live2d/waifu-tips.js"></script>
+    <script src="../live2d/live2d.js"></script>
+    <script type="text/javascript">initModel("../live2d/")</script>
+</body>

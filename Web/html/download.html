@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<head>
+    <title>Download | YanLin</title>
+    <link href="../css/landscape/download.css" media="all and (orientation:landscape)" rel="stylesheet"/>
+    <link href="../css/portrait/download.css" media="all and (orientation:portrait)" rel="stylesheet"/>
+    <link href="../css/normal.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+    <link rel="icon" href="../img/logo/favicon.ico">
+    <meta charset="utf-8"> 
+    <script src="../js/logo.js"></script>
+    <link rel="stylesheet" href="../css/spop.css">
+    <script src="../js/lib/jquery.min.js" type="text/javascript"></script>
+    <script src="../js/lib/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/lib/axios.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/pattern_mode/subpage.js"></script>
+    <script src="../js/lib/pace.min.js"></script>
+    <link rel="stylesheet" href="../css/pace-theme-minimal.css">
+    <script src="../js/lib/scrollprogressJS.js"></script>
+    <link rel="stylesheet" href="../css/scrollprogressJS.css">
+</head>
+<body>
+    <div class="top">
+        <div id="top-bt"></div>
+        <div class="logo">
+            <a href="../">
+                <img src="../img/logo/logo.png"/>
+            </a>
+        </div>
+        <div>
+            <div class="open_menu" id="open_menu">
+                <img src="../img/logo/menu.png"/>
+            </div>
+            <div class="menu_list" id="menu_list">
+                <ul>    
+                    <a href="../"><li>Home</li></a>
+                    <a href="news"><li>News</li></a>
+                    <a href="biography"><li>Biography</li></a>
+                    <script>title()</script>
+                    <a href="download"><li>Download</li></a>
+                    <a href="contsat"><li>Contact</li></a>
+                </ul>
+            </div>
+        </div>
+        <script src="../js/open_menu.js"></script>
+        <script>open_menu("d")</script>
+        <div class="triangle"></div>
+    </div>
+    <div class="bottom" id="bottom">
+        <div id="btop"></div>
+        <div class="main-body">
+            <div id="title">
+                <h2>Download</h2>
+                <textarea id="input"></textarea>
+                <script src="../js/copy.js"></script>
+            </div>
+            <div id="center">
+                <div id="item-i" v-for="item in msgs_download.dataShow">
+                    <img :src=item.img_url draggable="false"/>
+                    <div class="menu_item_v">
+                        <h5>{{item.name}}</h5>
+                        <a :href=item.bdy_photo id="photo" target="_blank">{{item.photo}}</a>
+                        <p id="pw">{{item.photo_password}}</p>
+                        <br>
+                        <a :href=item.bdy_video target="_blank">【视频】</a>
+                        <p id="pw">{{item.video_password}}</p>
+                    </div>
+                </div>
+                <div class="perpage" v-show="opacity">
+                    <button id="pre" :style="'opacity:'+ opacity" @click="prePage"><span>上一页</span></button>
+                    <button id="next" :style="'opacity:'+ opacity" @click="nextPage"><span>下一页</span></button>
+                </div>
+            </div>
+        </div>
+        <script src="../js/lib/spop.js"></script>
+        <script src="../js/app/download.js" type="text/javascript" charset="utf-8"></script>
+        <footer class="footer" id="footer">
+            <div id="sns-list">
+                <div class="f-item" id="open_qq"><a href="javascript:void(0)"><script src="../js/open_qq.js"></script><img src="../img/logo/QQ.png"/></a></div>
+                <div class="f-item" id="wx"><a href="javascript:void(0)"><img src="../img/logo/WX.png"/></a></div>
+                <script>sidebar()</script>
+            </div>
+            <div class="wx" id="wxbody" style="display:none">
+                <img src="../img/logo/wx.jpg">
+                <script src="../js/wechat.js"></script>
+                <script>open_vx("n")</script>
+            </div>
+            <p>@YanLin&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="about">YanLin Inc</a></p>
+        </footer>
+        <div id="to_top">
+            <script src="../js/to_top.js"></script>
+            <img src="../img/logo/jt (2).png" style="width:30px;position: absolute; bottom: 33px; right: 35px;cursor:pointer;">
+            <img src="../img/logo/lx.png">
+        </div>
+    </div>
+</body>

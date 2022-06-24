@@ -1,0 +1,120 @@
+.wx{
+    display: block;
+    position: fixed;
+    line-height: 0;
+    padding: 3px;
+    margin: 30px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 0 10px #63B8FF;
+    width: 100px;
+    height: 100px;
+}
+.wx_h{
+    display: block;
+    position: absolute;
+    line-height: 0;
+    padding: 3px;
+    margin: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #63B8FF;
+}
+.wx_c{
+    display: block;
+    position: fixed;
+    line-height: 0;
+    padding: 3px;
+    margin: 30px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 0 10px #63B8FF;
+    width: 100px;
+    height: 100px;
+}
+@media screen and (orientation: landscape) {
+/*横屏 css*/
+    
+    .wx{
+        left: -10px;
+        bottom: 275px;
+        transition: all 0.5s ease-in-out;
+    }
+    .wx img{
+        width: 100px;
+    }
+    .wx_h{
+        left: -400%;
+        top: -12.5px;
+        transition: all 0.5s ease-in-out;
+    }
+    .wx_h img{
+        width: 100px;
+    }
+    .wx_c{
+        left: -10px;
+        bottom: 275px;
+        transition: all 0.5s ease-in-out;
+    }
+    .wx_c img{
+        width: 100px;
+    }
+}
+@media screen and (orientation: portrait) {
+/*竖屏 css*/
+    .wx{
+        left: -10px;
+        bottom: -10px;
+        background-color: white;
+        transition: all 0.5s ease-in-out;
+    }
+    .wx img{
+        width: 100px;
+    }
+    .wx_h{
+        left: -400%;
+        top: -12.5px;
+        background-color: white;
+        transition: all 0.5s ease-in-out;
+    }
+    .wx_h img{
+        width: 100px;
+    }
+    .wx_c{
+        left: -10px;
+        bottom: 72%;
+        transition: all 0.5s ease-in-out;
+    }
+    .wx_c img{
+        width: 100px;
+    }
+}
+@keyframes hl_in{
+    0%{left: -390%;opacity: 0;}
+    50%{left: -425%}
+    100%{left: -400%;opacity: 100;}
+}
+@keyframes hl_out{
+    0%{left: -400%;opacity: 100;}
+    50%{left: -430%}
+    100%{left: -390%;opacity: 0;}
+}
+@keyframes l_in{
+    0%{left: -100%;opacity: 0;}
+    50%{left: 10px}
+    100%{left: -10px;opacity: 100;}
+}
+@keyframes l_out{
+    0%{left: -10px;opacity: 100;}
+    50%{left: 15px}
+    100%{left: -50%;opacity: 0;}
+}
+@keyframes s_in{
+    0%{left: -100%;opacity: 0;}
+    50%{left: 10px}
+    100%{left: -10px;opacity: 100;}
+}
+@keyframes s_out{
+    0%{left: -10px;opacity: 100;}
+    50%{left: 15px}
+    100%{left: -50%;opacity: 0;}
+}

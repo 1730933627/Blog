@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url("../../../../img/logo/lm.jpg");
+    background-color: #F0F8FF;
+    background-size: cover;
+    transition: background-image 0.5s ease-in-out;
+}
+.main-body{
+    width: 100%;
+}
+.center{
+    width: 75%;
+    margin: 0 auto;
+}
+.row{
+    user-select: none;
+    width: 30%;
+    margin: 250px auto 0;
+    padding: 50px;
+    position: relative;
+    top:0;
+    transition-property: width top;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+.from input{
+    width: 97%;  
+    height: 40px;
+    padding: 0 10px;
+    margin: 10px 0 40px;
+    background-color: white;
+    border: 1px solid rgb(97, 97, 97);
+    outline: none;
+    opacity: 0.5;
+    box-shadow: 0 0 5px rgb(50, 50, 50);
+    transition: opacity 0.5s ease-in-out;
+    border-radius: 3px;
+}
+.from input:hover,.from input:focus{
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+.button-block{
+    width: 125px;
+    margin: 0 auto;
+}
+.from button{
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    opacity: 0.5;
+    outline: none;
+    transition: opacity 0.5s ease-in-out;
+    border: 1px solid rgb(97, 97, 97);
+    box-shadow: 0 0 5px rgb(50, 50, 50);
+    border-radius: 3px;
+}
+.from button:hover,.from button:focus{
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+.logo{
+    user-select: none;
+    width: 250px;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    transform: scale(1);
+    transition-property: width transform top left;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+.logo img{
+    width: 100%;
+}
+.logo:hover{
+    transform: scale(1.05);
+    transition: transform 0.5s ease-in-out;
+}

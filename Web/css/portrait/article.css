@@ -1,0 +1,216 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #fff;
+    background-attachment:fixed;
+    background-size: cover;
+    transition: background-image 0.5s ease-in-out;
+}
+a{
+    text-decoration: none;
+}
+.top{
+    position:fixed;
+    left: 0;
+    top: 0;
+    width:100%; 
+    z-index:40;
+    padding:30px 0;
+}
+.bottom{
+    width:100%;
+}
+.bottom #btop{
+    height:200px;
+}
+.wideview{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 120px;
+    z-index: -90;
+    opacity: 0.9;
+    background-color: #fff;
+    transition: all 0.5s ease-in-out;
+}
+.logo{
+    width:180px;
+    margin-left: 30px;
+    margin-top: -10px;
+    transition:transform 0.2s ease-in-out;
+    transform: scale(1);
+}
+.logo img{
+    width: 100%;
+    user-select: none;
+}
+.logo:hover{
+    transition:transform 0.2s ease-in-out;
+    transform: scale(1.05);
+}
+.top ul a,.top ul a:visited{
+    color:#00BFFF;
+}
+.open_menu{
+    transition: all 0.5s ease-in-out;
+    cursor: cell;
+    margin: 30px;
+    width: 70px;
+    position: fixed;
+    top:0;
+    right:0;
+}
+.open_menu img{
+    width: 100%;
+}
+.menu_list{
+    background-color: #fff;
+    position:fixed;
+    top:150px;
+    right:0px;
+    border-top-left-radius:10px;
+    border-bottom-left-radius:10px;
+    z-index: 25;
+    transition: transform 0.3s ease-in-out;
+    transform: translate(100%,0);
+}
+.menu_list ul{
+    list-style-type:none;
+    padding: 0;
+    margin: 0;
+}
+.menu_list ul li{
+    margin: 30px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    transform:translate(0px,0px);
+    transition:transform 0.2s ease-in-out;
+}
+.menu_list ul li:hover{
+    transform:translate(-5px,0px);
+    transition:transform 0.2s ease-in-out;
+}
+.footer{
+    transition: all 0.5s ease-in-out;
+    opacity: 0.7;
+    width:60%;
+    margin: -6px auto 0 auto;
+    background-color: aliceblue;
+    padding: 35px 50px 10px 50px;
+}
+.footer #sns-list{
+    text-align: center;
+}
+.footer #sns-list .f-item{
+    display: inline;
+    margin: 0 10px;
+}
+.footer #sns-list .f-item img{
+    transform: translate(0px,0px);
+    transition:transform 0.2s ease-in-out;
+    width:12%;
+}
+.footer #sns-list .f-item img:hover{
+    transform: translate(0px,-5px);
+    transition:transform 0.2s ease-in-out;
+}
+.footer p{
+    margin-top: 50px;
+    text-align: center;
+    color: #00BFFF;
+}
+.footer p a,.footer a:visited{
+    color: #00BFFF;
+}
+.footer p a:hover{
+    text-decoration:underline;
+}
+@keyframes to_top
+{
+    0% {transform: scale(0);}
+    85%{transform: scale(1.2);}
+    100% {transform: scale(1);}
+}
+#to_top{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: 25px;
+    opacity: 1;
+    transform: scale(1);
+    animation: to_top 0.5s ease-in-out;
+    transition-property: transform,opacity;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+#to_top:hover{
+    transform: scale(1.1);
+    transition-property: transform,opacity;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+#to_top img{
+    display: block;
+    width:50px;
+}
+
+#Links{
+    cursor: default;
+    color: #00BFFF;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+@keyframes dropdown{
+    0%{transform: translateX(10px);}
+    100%{transform: translateX(0px);}
+}
+.dropdown-content{
+    padding: 6px 10px;
+    background: #fff;
+    display: none;
+    position: absolute;
+    animation: dropdown 0.5s ease-out;
+    top: -70px;
+    right: 80px;
+    border-radius: 5px;
+    text-align: center;
+}
+.dropdown-content a{
+    line-height: 2.5;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+#iframe_text{
+    width: 100%;
+    margin: 0 auto;
+    border: 0;
+}
+.page{
+    margin: 0 auto 25px;
+    width: 100%;
+    text-align: center;
+}
+.page img{
+    width: 100%;
+    background-color: #00BFFF;
+    border: #00BFFF 5px solid;
+    border-radius: 50%;
+}
+.page .left{
+    margin-right: 12%;
+    width: 15%;
+    display: inline-block;
+    cursor: pointer;
+}
+.page .right{
+    margin-left: 12%;
+    width: 15%;
+    display: inline-block;
+    cursor: pointer;
+}

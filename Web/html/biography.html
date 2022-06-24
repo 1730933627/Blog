@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+    <title>Biography | YanLin</title>
+    <link href="../css/landscape/biography.css" media="all and (orientation:landscape)" rel="stylesheet"/>
+    <link href="../css/portrait/biography.css" media="all and (orientation:portrait)" rel="stylesheet"/>
+    <link href="../css/normal.css" rel="stylesheet"/>
+    <link rel="icon" href="../img/logo/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+    <meta charset="utf-8"> 
+    <script src="../js/logo.js"></script>
+    <script src="../js/lib/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/lib/axios.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/pattern_mode/subpage.js"></script>
+    <script src="../js/lib/pace.min.js"></script>
+    <link rel="stylesheet" href="../css/pace-theme-minimal.css">
+    <script src="../js/lib/scrollprogressJS.js"></script>
+    <link rel="stylesheet" href="../css/scrollprogressJS.css">
+</head>
+<body>
+    <div class="top">
+        <div class="logo">
+            <a href="../">
+                <img src="../img/logo/logo.png"/>
+            </a>
+        </div>
+
+        <div>
+            <div class="open_menu" id="open_menu">
+                <img src="../img/logo/menu.png"/>
+            </div>
+            <div class="menu_list" id="menu_list">
+                <ul>    
+                    <a href="../"><li>Home</li></a>
+                    <a href="news"><li>News</li></a>
+                    <a href="biography"><li>Biography</li></a>
+                    <script>title()</script>
+                    <a href="download"><li>Download</li></a>
+                    <a href="contsat"><li>Contact</li></a>
+                </ul>
+            </div>
+        </div>
+        <script src="../js/open_menu.js"></script>
+        <script>open_menu("b")</script>
+        <div class="wideview"></div>
+    </div>
+
+    <div class="bottom" id="bottom">
+        <div id="btop"></div>
+        <div class="section">
+            <div id="centerview">
+                <h1>HISTORY</h1>
+                <div id="history-list">
+                    <div class="year-group" v-for="(year,i) of msgs_sort" :key="i">
+                        <p id="year-a">
+                            <span>{{year[0]}}</span>
+                        </p>
+                        <div class="date-item" v-for="item of year[1]" >
+                            <div id="item-inner">
+                                <p id="date">{{item.month}}</p>
+                                <p id="caption">{{item.text}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="../js/app/dynamic.js" type="text/javascript" charset="utf-8"></script>
+        </div>
+        <footer class="footer" id="footer">
+            <div id="sns-list">
+                <div class="f-item" id="open_qq"><a href="javascript:void(0)"><script src="../js/open_qq.js"></script><img src="../img/logo/QQ.png"/></a></div>
+                <div class="f-item" id="wx"><a href="javascript:void(0)"><img src="../img/logo/WX.png"/></a></div>
+                <div class="wx" id="wxbody" style="display:none">
+                    <img src="../img/logo/wx.jpg">
+                    <script src="../js/wechat.js"></script><script>open_vx("n")</script>
+                </div>
+                <script>sidebar()</script>
+            </div>
+            <p>@YanLin&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="about">YanLin Inc</a></p>
+        </footer>
+        <div id="to_top">
+            <script src="../js/to_top.js"></script>
+            <img src="../img/logo/jt (2).png" style="width:30px;position: absolute; bottom: 33px; right: 35px;">
+            <img src="../img/logo/lx.png">
+        </div>
+    </div>
+</body>

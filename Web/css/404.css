@@ -1,0 +1,241 @@
+/* Copyright 2013 The Chromium Authors. All rights reserved.
+ * Use of this source code is governed by a BSD-style license that can be
+ * found in the LICENSE file. */
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+.offline .interstitial-wrapper {
+  color: #2b2b2b;
+  font-size: 1em;
+  line-height: 1.55;
+  margin: 0 auto;
+  max-width: 640px;
+  width: 100%;
+}
+
+.offline .runner-container {
+  height: 150px;
+  max-width: 640px;
+  overflow: hidden;
+  position: absolute;
+  top: 28px;
+  width: 44px;
+}
+
+.offline .runner-canvas {
+  height: 150px;
+  max-width: 640px;
+  opacity: 1;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+
+.offline .controller {
+  background: rgba(247, 247, 247, .1);
+  height: 100vh;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  z-index: 1;
+}
+
+#offline-resources {
+  display: none;
+}
+
+
+body {
+  color: #535353;
+}
+
+.runner-container {
+  z-index: 9999;
+  background: white;
+  position: relative;
+}
+
+.NotFound_div {
+  width: 100%;
+  position: absolute;
+  text-align: right;
+}
+
+.NotFound_div h1 {
+  font-size: 3.5em;
+  padding-top: 105px;
+  background-color: white;
+  margin: 0;
+  letter-spacing:5px
+}
+
+
+.Not-Found-game {
+  width: 640px;
+  margin: 0 auto;
+}
+
+.interstitial-wrapper {
+  position: relative;
+}
+
+
+@media screen and (orientation:landscape){
+  .game{
+    padding-top: 10%;
+  }  
+  .logo{
+    width: 10%;
+    position: fixed;
+    top:4%;
+    right:4%;
+    transition: width 0.3s ease-in-out;
+  }
+  .logo img{
+    width: 100%;
+    transform:translate(0px,0px);
+    user-select: none;
+    transition:transform 0.2s ease-in-out;
+  }
+  .logo img:hover{
+    transform:translate(0px,-5px);
+    transition:transform 0.2s ease-in-out;
+  }
+  .open_menu{
+    cursor: cell;
+    margin: 30px;
+    width: 10%;
+    position: fixed;
+    top:0;
+    left:0;
+    display: none;
+  }
+  .open_menu img{
+    width: 0%;
+  }
+  .title{
+    display: none;
+  }
+  .menu_list{
+    display: none;
+    width: 750px;
+    height: 75px;
+    position: absolute;
+    top:1%;
+    right:2.5%;
+  }
+  .menu_list ul{
+    list-style-type:none;
+    padding: 0;
+    margin: 0;
+  }
+}
+@media screen and (orientation:portrait){
+  .game{
+    display: none;
+  }
+  .logo{
+    width: 300px;
+    position: fixed;
+    top:4%;
+    right:4%;
+    transition: width 0.3s ease-in-out;
+  }
+  .logo img{
+    width: 100%;
+    transform:translate(0px,0px);
+    user-select: none;
+    transition:transform 0.2s ease-in-out;
+  }
+  .logo img:hover{
+    transform:translate(0px,-5px);
+    transition:transform 0.2s ease-in-out;
+  }
+  .title{
+    cursor: default;
+    color:#2b2b2b;;
+    font-size: 20px;
+    padding-top: 70%;
+    text-align: center;
+    user-select:none;
+  }
+  .open_menu{
+    cursor: cell;
+    margin: 30px;
+    width: 15%;
+    position: fixed;
+    bottom:0;
+    left:0;
+    z-index: 50;
+  }
+  .open_menu img{
+    width: 100%;
+  }
+  .menu_list{
+    display: block;
+    background-color: #00BFFF;
+    position: fixed;;
+    bottom: 0;
+    right: 0;
+    border-top-left-radius:10px;
+    transform: translate(0,100%);  
+    transition: all 0.5s ease-in-out;
+  }
+  .menu_list ul{
+    list-style-type:none;
+    padding: 0;
+    margin: 0;
+  }
+  .menu_list a{
+    text-decoration: none;
+    color: aliceblue;
+  }
+  .menu_list ul li{
+    padding: 10px;
+    text-align: center;
+    margin: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    transform: scale(1);
+    transition:transform 0.2s ease-in-out;
+  }
+  .menu_list ul li:hover{
+    transform: scale(1.1);
+    transition:transform 0.2s ease-in-out;
+  }
+    
+  #Links{
+    cursor: default;
+    color: #fff;
+  }
+  .dropdown{
+    position: relative;
+    display: inline-block;
+  }
+  @keyframes dropdown{
+    0%{transform: translateX(10px);}
+    100%{transform: translateX(0px);}
+  }
+  .dropdown-content{
+    padding: 6px 10px;
+    background: #00BFFF;
+    display: none;
+    position: absolute;
+    animation: dropdown 0.5s ease-out;
+    top: -70px;
+    right: 95px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  .dropdown-content a{
+    line-height: 2.5;
+  }
+  .dropdown:hover .dropdown-content{
+    display: block;
+  }
+}

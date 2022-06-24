@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<head>
+    <title>YanLin official website</title>
+    <link rel="icon" href="img/logo/favicon.ico">
+    <meta name="keywords" content="yanlin,Yan_Lin,Blog,YanLin official website,稽智の琰凛,稽智的琰凛,MMD">
+    <meta name="description" content="稽智の琰凛 官方网站,作者:琰凛,一个MMDer的个人博客网站。YanLin official website,Author:Yan_Lin,a personal blog site MMDer.">
+    <meta name="author" content="YanLin,1730933627@yanlinn.com">
+    <meta name="generator" content="Visual Studio Code">
+    <meta name="copyright" content="Yan_Lin">
+    <link rel="stylesheet" media="all and (orientation:portrait)" href="css/portrait/Home.css"/>
+    <link rel="stylesheet" media="all and (orientation:landscape)" href="css/landscape/Home.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+    <meta charset="utf-8">
+    <script src="js/logo.js"></script>
+    <script src="js/lib/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/lib/axios.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/pattern_mode/home.js"></script>
+    <script src="js/lib/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/fakeLoader.css">
+    <script src="js/fakeLoader.js"></script>
+    <script src="js/lib/pace.min.js"></script>
+    <link rel="stylesheet" href="css/pace-theme-minimal.css">
+</head>
+<body>
+    <div class="fakeLoader" id="fakeLoader"></div>
+    <script src="js/run_fakeLoader.js" id="fakeLoader_js"></script>
+    <div class="main">
+        <div>
+            <canvas id="canvas" class="canvas"></canvas>
+        </div>
+        <div class="logo">
+            <a href="/"><img src="img/logo/logo.png"/></a>
+        </div>
+
+        <div>
+            <div class="open_menu" id="open_menu">
+                <img src="img/logo/menu.png"/>
+            </div>
+            <div class="menu_list" id="menu_list">
+                <ul>    
+                    <a href="/"><li class="list">Home</li></a>
+                    <a href="html/news"><li class="list">News</li></a>
+                    <a href="html/biography"><li class="list">Biography</li></a>
+                    <script>title()</script>
+                    <a href="html/download"><li class="list">Download</li></a>
+                    <a href="html/contsat"><li class="list">Contact</li></a>
+                </ul>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item_list" id="open_qq">
+                <a href="javascript:void(0)">
+                <img src="img/logo/QQ.png"/>
+                <script src="js/open_qq.js"></script>
+                </a>
+            </div>
+            <div class="item_list" id="wx">
+                <a href=javascript:void(0)>
+                <img src="img/logo/WX.png"/>
+                </a>
+            </div>
+            <div class="wx_h" id="wxbody" style="display:none">
+                <img src="img/logo/wx.jpg"">
+                <script src="js/wechat.js"></script>
+                <script>open_vx("h")</script>
+            </div>
+            <script>sidebar()</script>
+
+        </div>
+        <div class="xin_body" id="xin_click">
+            <img class="xin" src="img/logo/xin.png"></img>
+            <script src="js/pattern_mode/check_pattern.js"></script>
+        </div>
+        <div class="top_newsm" id="top_newsm">
+            <a href="javascript:void(0)" id="top_newsm_click"">
+                <div class="top_news">
+                    <p>TOPICS</p>
+                </div>
+                <div class="news_jt">
+                    <img src="img/logo/jt.png"/>
+                </div>
+            </a>
+            <div class="new_topics">
+                <span>New Topics</span>
+            </div>
+            <div class="new_topics_p" id="new_topics_p">
+                <div  v-for="item in msgs_topics">
+                    <span class="time">{{item.year}}.{{item.month}}</span>
+                    <a :href=item.video_url target="_blank" class="word">
+                        <span id="item_name">{{item.name}}</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script src="js/app/home.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/open_menu.js"></script>
+        <script>open_menu("h")</script>
+        <footer class="footer">
+            <p style="position:fixed;left:0;bottom:0;"><a href="https://beian.miit.gov.cn">陇ICP备20002446号</a></p>
+            <p>@稽智の琰凛&nbsp&nbsp&nbsp<a href="html/about">YanLin&nbspInc</a></p>
+        </footer>
+    </div>
+    <script type="text/javascript" src="js/particle/gsap.js"></script>
+    <script type="text/javascript" src="js/particle/chroma.js"></script>
+    <script type="text/javascript" src="js/particle/main.js"></script>
+</body>

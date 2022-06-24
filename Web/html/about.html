@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+    <title>YanLin Inc</title>
+    <link href="../css/landscape/about.css" media="all and (orientation:landscape)" rel="stylesheet"/>
+    <link href="../css/portrait/about.css" media="all and (orientation:portrait)" rel="stylesheet"/>
+    <link rel="icon" href="../img/logo/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+    <meta charset="utf-8"> 
+    <script src="../js/logo.js"></script>
+    <script src="../js/lib/jquery.min.js"></script>
+    <script src="../js/app/get_follower.js"></script>
+    <script src="../js/pattern_mode/subpage.js"></script>
+    <script src="../js/lib/pace.min.js"></script>
+    <link rel="stylesheet" href="../css/pace-theme-minimal.css">
+</head>
+<body>
+    <div class="top">
+        <div id="top-bt"></div>
+        <div class="logo">
+            <a href="../">
+                <img src="../img/logo/logo.png"/>
+            </a>
+        </div>
+        <div>
+            <div class="open_menu" id="open_menu">
+                <img src="../img/logo/menu.png"/>
+            </div>
+            <div class="menu_list" id="menu_list">
+                <ul>    
+                    <a href="../"><li>Home</li></a>
+                    <a href="news"><li>News</li></a>
+                    <a href="biography"><li>Biography</li></a>
+                    <script>title()</script>
+                    <a href="download"><li>Download</li></a>
+                    <a href="contsat"><li>Contact</li></a>
+                </ul>
+            </div>
+        </div>
+        <script src="../js/open_menu.js"></script>
+        <script>open_menu("a")</script>
+    </div>
+
+
+    <div class="bottom"onselectstart="return false;">
+        <div>
+            <div id="btop"></div>
+            <h1>YanLin Inc.</h1>
+            <div id="readme">
+                <div class="info">
+                    <p>当前粉丝:<span id="follower"></span></p>
+                    <p>今日:<span id="year"></span>年<span id="month"></span>月<span id=day></span>日</p>
+                    <p>请勿侵权</p>
+                    <p>可以闲聊哦~</p>
+                    <p>共有视频:<span id="sum_video"></span></p>
+                    <p>以上</p>
+                </div>
+                <p>法人名：稽智の琰凛</p>
+                <p>设立日：2020年6月11日</p>
+                <p>本站非商务网站</p>
+                <p>有事可以联系QQ:971348494</p>
+                <p>主要内容：呈现了有关MMD的一系列自制动画。</p>
+                <p>备案号：陇ICP备20002446号</p>
+            </div>
+            <footer class="footer">
+                <p>@YanLin&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="about">YanLin Inc</a></p>
+            </footer>
+        </div>
+    </div>
+</body>
